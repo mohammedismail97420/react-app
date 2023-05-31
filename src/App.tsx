@@ -46,7 +46,7 @@ const App = () => {
         <p>{user.name.first + " " + user.name.last}</p>
       </div>
       <div className="flex">
-        <h4>Email: </h4>
+        <h4>User Email: </h4>
         <p>{user.email}</p>
       </div>
 
