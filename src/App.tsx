@@ -42,7 +42,7 @@ const App = () => {
     <div className="App">
       <h1>User info</h1>
       <div className="flex">
-        <h4>Name test: </h4>
+        <h4>Full Name: </h4>
         <p>{user.name.first + " " + user.name.last}</p>
       </div>
       <div className="flex">
