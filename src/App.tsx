@@ -22,8 +22,16 @@ const App = () => {
     await axios
       .get("https://randomuser.me/api")
       .then((response) => {
-        localStorage.setItem("user", JSON.stringify(response.data.results[0]));
-        setUser(response.data.results[0]);
+        //Destructured name and email address
+        const {
+          name: { first, last },
+          email,
+        } = response.data.results[0];
+        setUser({ name: { first, last }, email });
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ name: { first, last }, email })
+        );
       })
       .catch((error) => {
         console.log(error);
